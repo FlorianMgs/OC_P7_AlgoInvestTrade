@@ -1,5 +1,5 @@
-from controllers.c_optimized import launch_optimized
-from controllers.c_bruteforce import launch_bruteforce
+from controllers.optimized import launch_optimized
+from controllers.bruteforce import launch_bruteforce
 
 
 def main_menu():

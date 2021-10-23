@@ -1,5 +1,5 @@
 from data.actions import actions
-from models.m_wallet import Wallet
+from models.wallet import Wallet
 from time import time
 
 
