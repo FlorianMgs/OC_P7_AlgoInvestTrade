@@ -88,4 +88,4 @@ def launch_bruteforce():
     exec_time_end = time()
 
     print(f'\n--- Execution time: {exec_time_end - exec_time_start} sec ---\n')
-    print(str(best_wallet)+ "\n\n")
+    print(str(best_wallet) + "\n\n")
