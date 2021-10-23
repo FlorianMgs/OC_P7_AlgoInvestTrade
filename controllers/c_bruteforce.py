@@ -1,5 +1,5 @@
-from actions import actions
-from m_wallet import Wallet
+from data.actions import actions
+from models.m_wallet import Wallet
 from time import time
 import itertools
 from operator import itemgetter
