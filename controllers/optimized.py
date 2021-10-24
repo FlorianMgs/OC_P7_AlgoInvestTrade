@@ -1,6 +1,5 @@
 from models.wallet import Wallet
 from time import time
-from contextlib import suppress
 
 
 def sort_actions(actions: list) -> list:
@@ -10,8 +9,8 @@ def sort_actions(actions: list) -> list:
     Calculate earnings for each action.
     Sort them by earnings in descending order.
     """
-    with suppress(ZeroDivisionError):
-        actions = sorted(actions, key=lambda x: x[1] * x[2] / 100, reverse=True)
+
+    actions = sorted(actions, key=lambda x: x[1] * x[2] / 100, reverse=True)
     return actions
 
 
