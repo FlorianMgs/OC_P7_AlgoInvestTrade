@@ -9,10 +9,10 @@ class Wallet:
         self.roi = 0
 
     def __str__(self):
-        representation = f'Actions: {str(self.get_actions())}\n' + \
-                         f'Price: {self.get_price()} $\n' + \
-                         f'Earnings: {self.get_earnings()} $\n' + \
-                         f'ROI: {self.get_roi()} %'
+        representation = f'Actions: {str(self.actions)}\n' + \
+                         f'Price: {self.price} $\n' + \
+                         f'Earnings: {self.earnings} $\n' + \
+                         f'ROI: {self.roi} %'
         return representation
 
     def __getitem__(self, item):
@@ -21,19 +21,13 @@ class Wallet:
         """
         match item:
             case "actions":
-                return self.get_actions()
+                return self.actions
             case "price":
-                return self.get_price()
+                return self.price
             case "earnings":
-                return self.get_earnings()
+                return self.earnings
             case "roi":
-                return self.get_roi()
-
-    """
-    
-    ACCESSORS
- 
-    """
+                return self.roi
 
     def set_action(self, action: tuple):
         """
@@ -52,27 +46,15 @@ class Wallet:
             del self.actions[index]
             self.price -= self.actions[index][1]
 
-    def get_actions(self):
-        return self.actions
-
     def set_price(self):
         for action in self.actions:
             self.price += action[1]
-
-    def get_price(self):
-        return self.price
 
     def set_earnings(self):
         for action in self.actions:
             self.earnings += action[1] * action[2] / 100
 
-    def get_earnings(self):
-        return self.earnings
-
     def set_roi(self):
         with suppress(ZeroDivisionError):
             self.roi = self.earnings / self.price * 100
-
-    def get_roi(self):
-        return self.roi
 

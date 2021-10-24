@@ -58,7 +58,7 @@ def keep_valid_wallets(wallets: list) -> list:
     """
     valid_wallets = []
     for wallet in wallets:
-        if wallet.get_price() <= 500:
+        if wallet.price <= 500:
             valid_wallets.append(wallet)
     return valid_wallets
 

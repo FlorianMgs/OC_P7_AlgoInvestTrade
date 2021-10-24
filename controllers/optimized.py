@@ -21,7 +21,7 @@ def create_wallet(actions: list) -> Wallet:
     """
     wallet = Wallet()
     for action in actions:
-        if wallet.get_price() < 500:
+        if wallet.price < 500:
             wallet.set_action(action)
         else:
             wallet.rem_action(index=-1)
