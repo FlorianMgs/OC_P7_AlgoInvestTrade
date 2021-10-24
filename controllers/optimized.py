@@ -30,7 +30,7 @@ def add_actions(actions: list, wallet: Wallet) -> Wallet:
             wallet.set_action(action)
 
         """
-        Then, add actions with price < remaining cash to spend
+        Then, add best performing actions with price < remaining cash to spend
         """
         if i > 0 and 0 < action[1] < 500 - wallet["price"]:
             wallet.set_action(action)
