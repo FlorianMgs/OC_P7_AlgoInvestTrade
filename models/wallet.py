@@ -17,7 +17,7 @@ class Wallet:
 
     def __getitem__(self, item):
         """
-        make wallet a subscriptable object, wo we are able to call itemgetter on it
+        make wallet a subscriptable object, so we are able to call itemgetter on it
         """
         match item:
             case "actions":

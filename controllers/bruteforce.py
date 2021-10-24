@@ -1,4 +1,3 @@
-from data.actions import actions
 from models.wallet import Wallet
 from time import time
 import itertools
@@ -73,7 +72,7 @@ def get_best_wallet(wallets: list) -> Wallet:
     return sorted(wallets, key=itemgetter("earnings"), reverse=True)[0]
 
 
-def launch_bruteforce():
+def launch_bruteforce(actions):
     exec_time_start = time()
 
     print("Generating all possible wallets...")

@@ -1,6 +1,6 @@
-from data.actions import actions
 from models.wallet import Wallet
 from time import time
+from contextlib import suppress
 
 
 def sort_actions(actions: list) -> list:
@@ -10,7 +10,9 @@ def sort_actions(actions: list) -> list:
     Calculate ratio ROI / price for each action.
     Sort them in descending order.
     """
-    return sorted(actions, key=lambda x: x[2] / x[1], reverse=True)
+    with suppress(ZeroDivisionError):
+        actions = sorted(actions, key=lambda x: x[2] / x[1], reverse=True)
+    return actions
 
 
 def create_wallet(actions: list) -> Wallet:
@@ -31,7 +33,7 @@ def create_wallet(actions: list) -> Wallet:
     return wallet
 
 
-def launch_optimized():
+def launch_optimized(actions):
     exec_time_start = time()
 
     best_wallet = create_wallet(sort_actions(actions))

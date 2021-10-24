@@ -1,22 +1,19 @@
-from controllers.optimized import launch_optimized
-from controllers.bruteforce import launch_bruteforce
+from views.dataset_selection import dataset_selection
+from views.algo_selection import algo_selection
 
 
 def main_menu():
 
     while True:
         user_input = input("--- AgloInvest&Trade ---\n\n"
-                           "1 - Bruteforce\n"
-                           "2 - Optimized\n"
+                           "0 - Load dataset\n"
                            "q - Quit\n\n"
                            "> "
                            )
 
         match user_input:
-            case "1":
-                launch_bruteforce()
-            case "2":
-                launch_optimized()
+            case "0":
+                algo_selection(dataset_selection())
             case "q":
                 break
             case _:
