@@ -22,7 +22,7 @@ def create_actions(path: str) -> list:
     with open(path, newline='') as dataset_file:
         dataset = csv.DictReader(dataset_file)
         for row in dataset:
-            if float(row["price"]) > 0:
+            if float(row["price"]) > 0 and float(row["roi"]) > 0:
                 actions.append((row["name"], float(row["price"]), float(row["roi"])))
         else:
             return list(set(actions))

@@ -1,5 +1,5 @@
 from models.wallet import Wallet
-from time import time
+import timeit
 
 
 def sort_actions(actions: list) -> list:
@@ -41,12 +41,15 @@ def add_actions(actions: list, wallet: Wallet) -> Wallet:
 
 
 def launch_optimized(actions):
-    exec_time_start = time()
+    exec_time_start = timeit.default_timer()
 
     wallet = Wallet()
     best_wallet = add_actions(sort_actions(actions), wallet)
 
-    exec_time_end = time()
-
-    print(f'\n--- Execution time: {exec_time_end - exec_time_start} sec ---\n')
+    exec_time_end = timeit.default_timer()
+    exec_time = (exec_time_end - exec_time_start) * 1000
+    print(exec_time)
+    print(f'\n--- Execution time: {exec_time} ms ---\n')
     print(str(best_wallet) + "\n\n")
+
+    return exec_time

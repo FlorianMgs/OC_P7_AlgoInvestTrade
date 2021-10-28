@@ -85,6 +85,9 @@ def launch_bruteforce(actions):
     best_wallet = get_best_wallet(valid_wallets)
 
     exec_time_end = time()
+    exec_time = exec_time_end - exec_time_start
 
-    print(f'\n--- Execution time: {exec_time_end - exec_time_start} sec ---\n')
+    print(f'\n--- Execution time: {exec_time} sec ---\n')
     print(str(best_wallet) + "\n\n")
+
+    return exec_time
