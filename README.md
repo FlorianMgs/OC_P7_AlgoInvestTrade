@@ -25,6 +25,11 @@ Après avoir supprimé les actions invalides (rendement ou prix inférieur ou é
 Ensuite, il créé un portefeuille en lui ajoutant une par une les actions tant que le budget de 500€ n’est pas entièrement consommé.  
 Il s’agit d’un algorithme glouton basé sur le problème du sac à dos.
 
+## Courbes de complexité
+Grâce à Matplotlib, vous pouvez générer des courbes de complexité pour chaque algorithme.  
+Il suffit d'aller dans "Time complexity" dans le menu principal, puis de choisir un algorithme.  
+Le résultat sera visible à la fin de l'exécution.
+
 ## Installation & lancement:
 Commencez tout d'abord par installer Python.  
 Lancez ensuite la console, placez vous dans le dossier de votre choix puis clonez ce repository:
