@@ -14,6 +14,7 @@ def bruteforce(actions: list) -> list:
     """
     There is 2**len(actions) combinations of possible wallets. 
     We create a list of binary words representing possible combinations of actions with itertools.
+    map: execute list function on items returned by itertools.product. returns a list
     """
     possible_combinations = map(list, itertools.product([False, True], repeat=len(actions)))
 
