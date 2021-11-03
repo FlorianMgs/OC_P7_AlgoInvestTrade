@@ -31,7 +31,7 @@ Il suffit d'aller dans "Time complexity" dans le menu principal, puis de choisir
 Le résultat sera visible à la fin de l'exécution.
 
 ## Installation & lancement:
-Commencez tout d'abord par installer Python.  
+Commencez tout d'abord par installer Python 3.10.  
 Lancez ensuite la console, placez vous dans le dossier de votre choix puis clonez ce repository:
 ```
 git clone https://github.com/FlorianMgs/OC_P7_AlgoInvestTrade.git
